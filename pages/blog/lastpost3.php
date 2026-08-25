@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- AdSense Code -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5253082939210672" crossorigin="anonymous"></script>
+    <meta name="google-adsense-account" content="ca-pub-5253082939210672">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Como valorizar seu imóvel com móveis planejados | LC Soluções em Móveis</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #1A1714;
+            --gold-light: #1A1714;
+            --gold-dark: #1A1714;
+            --dark: #0a0a0a;
+            --darker: #000000;
+            --dark-light: #1a1a1a;
+            --text: #e2e2e2;
+            --text-light: #a0a0a0;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--darker);
+            color: var(--text);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Hero */
+        .article-hero {
+            background: linear-gradient(145deg, 
+                rgba(10,10,10,0.95) 0%, 
+                rgba(26,26,26,0.85) 50%,
+                rgba(197,162,83,0.1) 100%),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100"><polygon points="1000,100 1000,0 0,100" fill="%23C5A253" opacity="0.03"/></svg>');
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(197, 162, 83, 0.2);
+            padding: 100px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .article-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            text-align: center;
+            color: var(--white);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .article-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--gold), transparent);
+            border-radius: 10px;
+        }
+
+        .article-meta {
+            text-align: center;
+            color: var(--text-light);
+            font-weight: 300;
+            font-size: 1.1rem;
+            margin-top: 40px;
+        }
+
+        .meta-divider {
+            color: var(--gold);
+            margin: 0 15px;
+        }
+
+        /* Conteúdo do Artigo */
+        .article-content {
+            background: linear-gradient(145deg, rgba(26,26,26,0.6), rgba(10,10,10,0.8));
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 60px 50px;
+            margin: -40px auto 60px;
+            position: relative;
+            border: 1px solid rgba(197, 162, 83, 0.1);
+            box-shadow: 
+                0 10px 30px rgba(0,0,0,0.3),
+                0 0 0 1px rgba(197, 162, 83, 0.05),
+                inset 0 1px 0 rgba(255,255,255,0.1);
+        }
+
+        .article-intro {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-bottom: 50px;
+            padding: 30px;
+            background: rgba(197, 162, 83, 0.05);
+            border-left: 4px solid var(--gold);
+            border-radius: 0 15px 15px 0;
+        }
+
+        .content-section {
+            margin-bottom: 50px;
+            padding: 30px;
+            background: linear-gradient(145deg, rgba(26,26,26,0.4), rgba(10,10,10,0.6));
+            border-radius: 20px;
+            border: 1px solid rgba(197, 162, 83, 0.08);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(197,162,83,0.02), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .content-section:hover {
+            transform: translateY(-5px);
+            border-color: rgba(197, 162, 83, 0.2);
+            box-shadow: 
+                0 15px 40px rgba(197, 162, 83, 0.1),
+                0 0 0 1px rgba(197, 162, 83, 0.1);
+        }
+
+        .content-section:hover::before {
+            opacity: 1;
+        }
+
+        .section-number {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--dark);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            font-weight: 700;
+            margin-right: 15px;
+            font-size: 1.1rem;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gold-light);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text);
+            margin-left: 55px;
+        }
+
+        .highlight-text {
+            color: var(--gold-light);
+            font-weight: 600;
+            background: rgba(197, 162, 83, 0.1);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* Blockquote Estilizado */
+        .blockquote {
+            background: linear-gradient(145deg, 
+                rgba(197, 162, 83, 0.1), 
+                rgba(197, 162, 83, 0.05));
+            border-left: 4px solid var(--gold);
+            padding: 40px;
+            margin: 50px 0;
+            border-radius: 0 20px 20px 0;
+            position: relative;
+            font-style: italic;
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+
+        .blockquote::before {
+            content: '"';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            font-size: 4rem;
+            color: var(--gold);
+            opacity: 0.3;
+            font-family: serif;
+            line-height: 1;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(145deg, 
+                rgba(197, 162, 83, 0.15), 
+                rgba(197, 162, 83, 0.08));
+            border: 1px solid rgba(197, 162, 83, 0.2);
+            padding: 50px;
+            border-radius: 20px;
+            margin-top: 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" opacity="0.05"><polygon points="50,0 100,50 50,100 0,50" fill="%23C5A253"/></svg>');
+            background-size: 50px 50px;
+            animation: float 20s linear infinite;
+        }
+
+        .cta-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: var(--gold);
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+            color: var(--dark);
+            font-weight: 600;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 
+                0 5px 15px rgba(197, 162, 83, 0.3),
+                0 0 0 1px rgba(197, 162, 83, 0.1);
+            font-size: 1.1rem;
+        }
+
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+            transition: left 0.5s;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 
+                0 8px 25px rgba(197, 162, 83, 0.4),
+                0 0 0 1px rgba(197, 162, 83, 0.2);
+        }
+
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        .article-footer {
+            background: linear-gradient(145deg, var(--dark), var(--darker));
+            border-top: 1px solid rgba(197, 162, 83, 0.1);
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-light);
+            font-weight: 300;
+        }
+
+        /* Partículas Douradas */
+        .gold-particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: var(--gold);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(180deg); }
+        }
+
+        @keyframes float-bg {
+            0% { transform: translateX(0) translateY(0); }
+            100% { transform: translateX(-50px) translateY(-50px); }
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .article-content {
+                padding: 40px 25px;
+                margin: -20px auto 40px;
+                border-radius: 20px;
+            }
+
+            .content-section {
+                padding: 25px 20px;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .section-content {
+                margin-left: 0;
+                margin-top: 15px;
+            }
+
+            .article-intro {
+                font-size: 1.1rem;
+                padding: 20px;
+            }
+
+            .cta-section {
+                padding: 30px 20px;
+            }
+
+            .blockquote {
+                padding: 30px 25px;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-hero {
+                padding: 80px 0 60px;
+            }
+
+            .article-content {
+                padding: 30px 20px;
+                border-radius: 15px;
+            }
+
+            .content-section {
+                padding: 20px 15px;
+            }
+
+            .section-number {
+                width: 35px;
+                height: 35px;
+                line-height: 35px;
+                font-size: 1rem;
+                margin-right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Hero -->
+    <header class="article-hero">
+        <div class="container">
+            <h1 class="article-title">
+                Como valorizar seu imóvel com móveis planejados
+            </h1>
+            <div class="article-meta">
+                <span>23 de Setembro, 2025</span>
+                <span class="meta-divider">•</span>
+                <span>Categoria: Investimentos</span>
+                <span class="meta-divider">•</span>
+                <span>LC Soluções em Móveis</span>
+            </div>
+        </div>
+        
+        <!-- Partículas decorativas -->
+        <div class="gold-particle" style="top: 20%; left: 10%; animation-delay: 0s;"></div>
+        <div class="gold-particle" style="top: 60%; left: 85%; animation-delay: 2s;"></div>
+        <div class="gold-particle" style="top: 40%; left: 70%; animation-delay: 4s;"></div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container">
+        <article class="article-content">
+            <p class="article-intro">
+                Os móveis planejados não são apenas uma escolha estética: eles podem representar um verdadeiro investimento. Ambientes bem projetados, funcionais e modernos fazem com que o imóvel se destaque no mercado e alcance maior valorização. Veja como isso acontece.
+            </p>
+
+            <section class="content-section">
+                <h2 class="section-title">
+                    <span class="section-number">1</span>
+                    Diferencial competitivo no mercado
+                </h2>
+                <p class="section-content">
+                    Um imóvel equipado com móveis planejados chama a atenção de compradores e inquilinos. O fato de o espaço já estar pronto para uso reduz a necessidade de reformas e aumenta o interesse imediato, criando uma vantagem competitiva significativa.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">
+                    <span class="section-number">2</span>
+                    Valorização patrimonial
+                </h2>
+                <p class="section-content">
+                    Estudos do setor imobiliário apontam que imóveis com ambientes planejados podem valorizar entre <span class="highlight-text">10% e 15%</span>. Essa valorização ocorre porque o comprador reconhece a praticidade e o custo poupado com projetos futuros, transformando o investimento em ganho real.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">
+                    <span class="section-number">3</span>
+                    Funcionalidade e conforto
+                </h2>
+                <p class="section-content">
+                    Os móveis sob medida tornam os espaços mais funcionais, organizados e agradáveis, aumentando a percepção de qualidade de vida e bem-estar dentro do imóvel. Cada centímetro é otimizado para atender às necessidades específicas dos moradores.
+                </p>
+            </section>
+
+            <section class="content-section">
+                <h2 class="section-title">
+                    <span class="section-number">4</span>
+                    Retorno no aluguel
+                </h2>
+                <p class="section-content">
+                    Para quem investe em imóveis para locação, móveis planejados permitem cobrar valores <span class="highlight-text">até 30% mais altos</span> de aluguel, já que agregam conveniência, modernidade e funcionalidade para o inquilino, garantindo um retorno financeiro consistente.
+                </p>
+            </section>
+
+            <blockquote class="blockquote">
+                "Investir em móveis planejados é unir beleza, funcionalidade e valorização imobiliária em um único projeto."
+            </blockquote>
+
+            <section class="content-section">
+                <h2 class="section-title">
+                    <span class="section-number">★</span>
+                    Conclusão
+                </h2>
+                <p class="section-content">
+                    Seja para vender, alugar ou morar, investir em móveis planejados significa aumentar o valor percebido e real do imóvel. Com a <span class="highlight-text">LC Soluções em Móveis</span>, você garante projetos sob medida que valorizam seu patrimônio e tornam seu lar muito mais funcional, moderno e aconchegante.
+                </p>
+            </section>
+
+            <div class="cta-section">
+                <h3 class="cta-title">Pronto para valorizar seu imóvel?</h3>
+                <p class="section-content" style="margin-bottom: 25px; position: relative;">
+                    Transforme seu espaço com projetos exclusivos que unem sofisticação e funcionalidade
+                </p>
+                <a href="/contato" class="btn-primary">Invista na valorização do seu imóvel</a>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="article-footer">
+        <div class="container">
+            <p>© <span id="year"></span> LC Soluções em Móveis · Todos os direitos reservados</p>
+            <p style="margin-top: 10px; font-size: 0.9rem; opacity: 0.7;">
+                Design sofisticado para ambientes que inspiram
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Ano atual no footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Efeito de entrada suave para as seções
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.content-section');
+            const blockquote = document.querySelector('.blockquote');
+            const ctaSection = document.querySelector('.cta-section');
+            
+            sections.forEach((section, index) => {
+                section.style.opacity = '0';
+                section.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    section.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                    section.style.opacity = '1';
+                    section.style.transform = 'translateY(0)';
+                }, 200 * index);
+            });
+
+            // Animação para blockquote
+            setTimeout(() => {
+                blockquote.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                blockquote.style.opacity = '1';
+                blockquote.style.transform = 'translateY(0)';
+            }, 1000);
+
+            // Animação para CTA
+            setTimeout(() => {
+                ctaSection.style.transition = 'all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+                ctaSection.style.opacity = '1';
+                ctaSection.style.transform = 'translateY(0)';
+            }, 1200);
+        });
+    </script>
+</body>
+</html>

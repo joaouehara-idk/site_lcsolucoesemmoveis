@@ -1,0 +1,6 @@
+DB_HOST='localhost'
+DB_NAME='luizca93_lcsolucoes_site'
+DB_USER='luizca93_joao'
+DB_PASS='Jm@10653407388336141$'
+DB_PORT='3306'
+DB_CHARSET='utf8mb4'

@@ -1,0 +1,911 @@
+/* ============================================
+   SERVIÇOS — TÉCNICO / INFORMATIVO
+   Design exclusivo LC Soluções em Móveis
+   ============================================ */
+
+/* --- Grid Background (papel técnico) --- */
+.services-tech-page {
+  position: relative;
+  background-color: #FAFAFA;
+}
+
+.services-tech-page::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.35;
+  background-image:
+    linear-gradient(rgba(26,23,20,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26,23,20,0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.services-tech-page > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Hero Técnico --- */
+.tech-hero {
+  padding: 100px 0 80px;
+  border-bottom: 1px solid rgba(26,23,20,0.08);
+  background: #FFFFFF;
+}
+
+.tech-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.tech-hero-label {
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8A8580;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tech-hero-label::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: #1A1714;
+}
+
+.tech-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 400;
+  line-height: 1.15;
+  color: #1A1714;
+  margin: 0 0 24px;
+}
+
+.tech-hero h1 span {
+  color: #8A8580;
+  font-style: italic;
+}
+
+.tech-hero-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #4A4540;
+  max-width: 520px;
+  margin: 0 0 32px;
+}
+
+.tech-hero-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+
+.tech-meta-item {
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.78rem;
+  color: #8A8580;
+}
+
+.tech-meta-item strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #1A1714;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+
+.tech-hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-tech {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+}
+
+.btn-tech-primary {
+  background: #1A1714;
+  color: #F6F1EB;
+}
+
+.btn-tech-primary:hover {
+  background: #2D2924;
+  transform: translateY(-1px);
+}
+
+.btn-tech-secondary {
+  background: transparent;
+  color: #1A1714;
+  border: 1.5px solid rgba(26,23,20,0.2);
+}
+
+.btn-tech-secondary:hover {
+  border-color: #1A1714;
+}
+
+/* Hero visual — desenho técnico */
+.tech-hero-visual {
+  position: relative;
+  background: #F6F1EB;
+  border: 1px solid rgba(26,23,20,0.06);
+  border-radius: 2px;
+  padding: 40px;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tech-blueprint {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3/4;
+  border: 1.5px solid rgba(26,23,20,0.15);
+  position: relative;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 19px,
+    rgba(26,23,20,0.04) 19px,
+    rgba(26,23,20,0.04) 20px
+  );
+}
+
+.tech-blueprint::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: rgba(26,23,20,0.06);
+}
+
+.tech-blueprint::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(26,23,20,0.06);
+}
+
+.blueprint-corner {
+  position: absolute;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.6rem;
+  color: #B5B0AA;
+  letter-spacing: 0.1em;
+}
+
+.blueprint-corner.tl { top: 8px; left: 10px; }
+.blueprint-corner.tr { top: 8px; right: 10px; text-align: right; }
+.blueprint-corner.bl { bottom: 8px; left: 10px; }
+.blueprint-corner.br { bottom: 8px; right: 10px; text-align: right; }
+
+.blueprint-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.blueprint-center i {
+  font-size: 2.5rem;
+  color: rgba(26,23,20,0.12);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.blueprint-center span {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.65rem;
+  color: #B5B0AA;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+/* --- Seção Materiais --- */
+.tech-materials {
+  padding: 80px 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-section-header {
+  margin-bottom: 48px;
+}
+
+.tech-section-label {
+  font-family: 'SF Mono', 'Fira Code', 'Courier New', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8A8580;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tech-section-label::before {
+  content: '';
+  width: 24px;
+  height: 1.5px;
+  background: #1A1714;
+}
+
+.tech-section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 400;
+  color: #1A1714;
+  margin: 0 0 8px;
+}
+
+.tech-section-subtitle {
+  font-size: 0.95rem;
+  color: #8A8580;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.tech-materials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.tech-material-card {
+  background: #FAFAFA;
+  border: 1px solid rgba(26,23,20,0.06);
+  border-radius: 2px;
+  padding: 32px 28px;
+  transition: all 0.3s ease;
+}
+
+.tech-material-card:hover {
+  border-color: rgba(26,23,20,0.15);
+  box-shadow: 0 4px 20px rgba(26,23,20,0.04);
+}
+
+.material-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.material-icon {
+  width: 40px;
+  height: 40px;
+  background: #1A1714;
+  color: #F6F1EB;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2px;
+  font-size: 1rem;
+}
+
+.material-tag {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8A8580;
+  padding: 4px 8px;
+  border: 1px solid rgba(26,23,20,0.1);
+  border-radius: 1px;
+}
+
+.material-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.3rem;
+  color: #1A1714;
+  margin: 0 0 6px;
+}
+
+.material-specs {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: #8A8580;
+  margin-bottom: 14px;
+  line-height: 1.7;
+}
+
+.material-desc {
+  font-size: 0.88rem;
+  color: #4A4540;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.material-use {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(26,23,20,0.06);
+  font-size: 0.8rem;
+  color: #8A8580;
+}
+
+.material-use strong {
+  color: #1A1714;
+  font-weight: 600;
+}
+
+/* --- Seção Processo --- */
+.tech-process {
+  padding: 80px 0;
+  background: #F6F1EB;
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-process-timeline {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+}
+
+.tech-process-timeline::before {
+  content: '';
+  position: absolute;
+  top: 28px;
+  left: 40px;
+  right: 40px;
+  height: 1.5px;
+  background: rgba(26,23,20,0.1);
+  z-index: 0;
+}
+
+.process-step {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  padding: 0 12px;
+}
+
+.step-number {
+  width: 56px;
+  height: 56px;
+  background: #FFFFFF;
+  border: 1.5px solid rgba(26,23,20,0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #1A1714;
+  position: relative;
+}
+
+.process-step:hover .step-number {
+  background: #1A1714;
+  color: #F6F1EB;
+  border-color: #1A1714;
+}
+
+.step-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  color: #1A1714;
+  margin: 0 0 8px;
+}
+
+.step-desc {
+  font-size: 0.82rem;
+  color: #4A4540;
+  line-height: 1.6;
+}
+
+/* --- Seção Técnica / Detalhes --- */
+.tech-details {
+  padding: 80px 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.tech-detail-block {
+  padding: 28px 0;
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-detail-block:last-child {
+  border-bottom: none;
+}
+
+.tech-detail-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.tech-detail-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(26,23,20,0.06);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1A1714;
+  font-size: 0.85rem;
+}
+
+.tech-detail-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.2rem;
+  color: #1A1714;
+  margin: 0;
+}
+
+.tech-detail-text {
+  font-size: 0.88rem;
+  color: #4A4540;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.tech-detail-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.tech-detail-list li {
+  font-size: 0.85rem;
+  color: #4A4540;
+  padding: 6px 0 6px 20px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.tech-detail-list li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: #8A8580;
+  font-family: 'SF Mono', 'Fira Code', monospace;
+}
+
+/* --- Garantia / Dados --- */
+.tech-stats {
+  padding: 60px 0;
+  background: #1A1714;
+  color: #F6F1EB;
+}
+
+.tech-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  text-align: center;
+}
+
+.tech-stat-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 2.4rem;
+  color: #F6F1EB;
+  margin-bottom: 4px;
+}
+
+.tech-stat-label {
+  font-size: 0.78rem;
+  color: rgba(246,241,235,0.55);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* --- FAQ Técnico --- */
+.tech-faq {
+  padding: 80px 0;
+  background: #FAFAFA;
+}
+
+.tech-faq-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.tech-faq-item {
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 20px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #1A1714;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.tech-faq-question:hover {
+  color: #1A1714;
+}
+
+.tech-faq-toggle {
+  width: 24px;
+  height: 24px;
+  border: 1px solid rgba(26,23,20,0.15);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+  font-size: 0.7rem;
+  color: #8A8580;
+}
+
+.tech-faq-item.open .tech-faq-toggle {
+  background: #1A1714;
+  color: #F6F1EB;
+  border-color: #1A1714;
+}
+
+.tech-faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+.tech-faq-item.open .tech-faq-answer {
+  max-height: 400px;
+  padding-bottom: 20px;
+}
+
+.tech-faq-answer p {
+  font-size: 0.88rem;
+  color: #4A4540;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* --- CTA Técnico --- */
+.tech-cta {
+  padding: 80px 0;
+  background: #FFFFFF;
+  border-top: 1px solid rgba(26,23,20,0.06);
+  text-align: center;
+}
+
+.tech-cta-box {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.tech-cta-label {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8A8580;
+  margin-bottom: 16px;
+}
+
+.tech-cta-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  color: #1A1714;
+  margin: 0 0 16px;
+}
+
+.tech-cta-desc {
+  font-size: 0.95rem;
+  color: #4A4540;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+.tech-cta-note {
+  margin-top: 20px;
+  font-size: 0.78rem;
+  color: #8A8580;
+  font-style: italic;
+}
+
+/* --- Serviço Individual --- */
+.tech-service-hero {
+  padding: 100px 0 60px;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(26,23,20,0.08);
+}
+
+.tech-service-hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.tech-service-hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  color: #1A1714;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.tech-service-hero h1 span {
+  color: #8A8580;
+  font-style: italic;
+}
+
+.tech-service-meta {
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: 0.75rem;
+  color: #8A8580;
+  margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.tech-service-meta span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tech-service-desc {
+  font-size: 1rem;
+  color: #4A4540;
+  line-height: 1.8;
+  margin: 0 0 28px;
+}
+
+.tech-service-image {
+  background: #F6F1EB;
+  border: 1px solid rgba(26,23,20,0.06);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.tech-service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- Especificações Técnicas --- */
+.tech-specs {
+  padding: 60px 0;
+  background: #FAFAFA;
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-specs-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+.tech-spec-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(26,23,20,0.06);
+  border-radius: 2px;
+  padding: 28px;
+}
+
+.tech-spec-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-spec-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(26,23,20,0.06);
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1A1714;
+}
+
+.tech-spec-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.15rem;
+  color: #1A1714;
+  margin: 0;
+}
+
+.tech-spec-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tech-spec-list li {
+  font-size: 0.85rem;
+  color: #4A4540;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(26,23,20,0.04);
+  line-height: 1.6;
+  display: flex;
+  gap: 10px;
+}
+
+.tech-spec-list li:last-child {
+  border-bottom: none;
+}
+
+.tech-spec-list li strong {
+  color: #1A1714;
+  font-weight: 600;
+  min-width: 140px;
+  flex-shrink: 0;
+}
+
+/* --- Aplicações --- */
+.tech-applications {
+  padding: 60px 0;
+  background: #FFFFFF;
+  border-bottom: 1px solid rgba(26,23,20,0.06);
+}
+
+.tech-app-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.tech-app-card {
+  background: #FAFAFA;
+  border: 1px solid rgba(26,23,20,0.06);
+  border-radius: 2px;
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.tech-app-card:hover {
+  border-color: rgba(26,23,20,0.15);
+}
+
+.tech-app-icon {
+  font-size: 1.3rem;
+  color: #1A1714;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+
+.tech-app-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 1.05rem;
+  color: #1A1714;
+  margin: 0 0 6px;
+}
+
+.tech-app-desc {
+  font-size: 0.82rem;
+  color: #4A4540;
+  line-height: 1.6;
+}
+
+/* --- Responsivo --- */
+@media (max-width: 1024px) {
+  .tech-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .tech-hero-visual {
+    order: -1;
+    min-height: 280px;
+  }
+
+  .tech-process-timeline {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .tech-process-timeline::before {
+    display: none;
+  }
+
+  .tech-materials-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-details-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .tech-specs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-app-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .tech-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .tech-hero {
+    padding: 60px 0 50px;
+  }
+
+  .tech-process-timeline {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .tech-materials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-app-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-hero-actions {
+    flex-direction: column;
+  }
+
+  .btn-tech {
+    width: 100%;
+    justify-content: center;
+  }
+}
