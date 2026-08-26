@@ -1,0 +1,27 @@
+# Aumentar limites de upload para a galeria
+php_value upload_max_filesize 128M
+php_value post_max_size 128M
+php_value max_file_uploads 100
+php_value max_execution_time 300
+php_value memory_limit 256M
+
+# Impedir a listagem de diretórios
+Options -Indexes
+
+# Impedir o acesso a arquivos sensíveis
+<FilesMatch "^\.env|composer\.json|composer\.lock|setup_database\.sql|AGENTS\.md|env\.md|discloud\.config">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Impedir acesso a pastas de sistema
+RedirectMatch 403 ^/(app|config|database|includes|pages|routes|storage|vendor|pages_html)($|/)
+
+RewriteEngine On
+# Redirecionar /index.php para / (evita conteúdo duplicado)
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\s/+index\.php[?\s] [NC]
+RewriteRule ^index\.php$ / [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [L]

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+Disallow: /admin
+Disallow: /login
+Disallow: /verificar-token
+Disallow: /fix-db
+Disallow: /api
+Disallow: /fix_session7.php
+Disallow: /test_email_diagnostic.php
+
+Sitemap: https://lcsolucoesemmoveis.com.br/sitemap.xml

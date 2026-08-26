@@ -1,0 +1,33 @@
+# Secrets (never commit)
+email_smtp_config.json
+email_brevo_api.json
+api/config.php
+api/send_recipients.json
+
+# Debug / temporary scripts
+api/db_info.php
+api/db_info2.php
+api/send_batch.php
+api/send_temp.php
+porta
+porta_*
+
+# Temp files
+tmp/
+__pycache__/
+*.pyc
+
+# Raw data (CNPJ zip files - redownload via RFB)
+data/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.sublime-*

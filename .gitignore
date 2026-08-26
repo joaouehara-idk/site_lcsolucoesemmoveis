@@ -1,0 +1,8 @@
+.env
+vendor/
+storage/logs/
+test-results/
+fix_session7.php
+test_email.php
+test_token_debug.php
+*.log
